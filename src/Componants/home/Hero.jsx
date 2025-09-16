@@ -2,9 +2,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import AnimatedElement from './AnimatedElement'
 import PulseButton from './PulseButton'
+import { useNavigate } from 'react-router-dom'
 import { Play, Trophy, Users, Calendar, Target, Zap, Star, ArrowRight, Gamepad2, Sword, Shield } from 'lucide-react';
 
 const Hero = () => {
+  const navigate= useNavigate()
   return (
     <motion.section className="relative z-10 min-h-screen flex items-center" 
      initial={{ opacity: 0, y: 50 }}
@@ -44,12 +46,12 @@ const Hero = () => {
 
               <AnimatedElement id="hero-buttons" delay={900} animation="slideUp">
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <PulseButton>
+                  <PulseButton onclick={() => navigate("/register")}>
                     <Sword className="w-5 h-5" />
                     JOIN BATTLE
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                   </PulseButton>
-                  <PulseButton variant="secondary">
+                  <PulseButton variant="secondary" onclick={() => navigate("/rules")}>
                     <Shield className="w-5 h-5" />
                     TOURNAMENT RULES
                   </PulseButton>

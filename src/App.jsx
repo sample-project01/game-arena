@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import {  Gamepad2 } from 'lucide-react';
+;
 
-import Footer from './Componants/Footer';
-import GameCard from "./Componants/GameCard"
-import Hero from "./Componants/Hero"
-import Navbar from './Componants/Navbar';
+import Footer from './Componants/home/Footer';
+import GameCard from "./Componants/home/GameCard"
+import Hero from "./Componants/home/Hero"
+import Navbar from './Componants/home/Navbar';
 const GamingEventLanding = () => {
 
   const [isLoaded, setIsLoaded] = useState(false);

@@ -52,7 +52,7 @@ const GameCard = () => {
                   ))}
                 </div>
                 <div className="flex items-center justify-between">
-                  <div className="text-cyan-400 font-bold group-hover:text-white transition-colors">Register Now →</div>
+                  <div className="text-cyan-400 font-bold group-hover:text-white transition-colors" onClick={() => window.location.href = "https://forms.gle/HXDsVh6PM2FP6MQH9"}>Register Now →</div>
                   <div className="px-4 py-2 bg-cyan-500/20 rounded-full text-cyan-400 text-sm font-bold">OPEN</div>
                 </div>
               </GlowingCard>
@@ -86,7 +86,7 @@ const GameCard = () => {
                   ))}
                 </div>
                 <div className="flex items-center justify-between">
-                  <div className="text-orange-400 font-bold group-hover:text-white transition-colors">Register Now →</div>
+                  <div className="text-orange-400 font-bold group-hover:text-white transition-colors" onClick={() => window.location.href = "https://forms.gle/HXDsVh6PM2FP6MQH9"}>Register Now →</div>
                   <div className="px-4 py-2 bg-orange-500/20 rounded-full text-orange-400 text-sm font-bold">OPEN</div>
                 </div>
               </GlowingCard>

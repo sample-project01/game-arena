@@ -4,6 +4,28 @@ import AnimatedElement from './AnimatedElement'
 import { Gamepad2 } from 'lucide-react'
 
 const Footer = () => {
+  const quickLinks=[
+  {
+    name:"Tournament Rules",
+    link:"/rules"
+  },
+  {
+    name:"'Registration",
+    link:"/rules"
+  },
+  {
+    name:"Schedule",
+    link:"/rules"
+  },
+  {
+    name:"Prize Pool",
+    link:"/rules"
+  },
+  {
+    name:"Contact Us",
+    link:"/rules"
+  },
+]
   return (
      <motion.footer className="relative z-10 bg-black/40 backdrop-blur-xl border-t border-white/10"
        initial={{ opacity: 0, y: 50 }}
@@ -53,10 +75,10 @@ const Footer = () => {
               <AnimatedElement id="footer-links" delay={400} animation="slideUp">
                 <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
                 <ul className="space-y-3">
-                  {['Tournament Rules', 'Registration', 'Schedule', 'Prize Pool', 'Contact Us'].map((link, index) => (
-                    <li key={link}>
-                      <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors duration-300 hover:translate-x-2 transform inline-block">
-                        {link}
+                  {quickLinks.map((link, index) => (
+                    <li key={link.name}>
+                      <a href={link.link} className="text-gray-400 hover:text-orange-400 transition-colors duration-300 hover:translate-x-2 transform inline-block">
+                        {link.name}
                       </a>
                     </li>
                   ))}
