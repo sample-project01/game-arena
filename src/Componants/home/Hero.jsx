@@ -45,8 +45,8 @@ const Hero = () => {
               </AnimatedElement>
 
               <AnimatedElement id="hero-buttons" delay={900} animation="slideUp">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <PulseButton onclick={() => navigate("/register")}>
+                <div className="flex flex-col sm:flex-row gap-4 cursor-pointer">
+                  <PulseButton onclick={() => navigate("/join-battle")}>
                     <Sword className="w-5 h-5" />
                     JOIN BATTLE
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
@@ -64,10 +64,10 @@ const Hero = () => {
               <AnimatedElement id="floating-stats" delay={1100} animation="scale">
                 <div className="space-y-6">
                   {[
-                    { icon: Trophy, title: "Prize Pool", value: "₹2,50,000", color: "from-yellow-400 to-orange-500" },
-                    { icon: Users, title: "Total Players", value: "1000+", color: "from-blue-400 to-purple-500" },
-                    { icon: Calendar, title: "Event Days", value: "7 Days", color: "from-green-400 to-teal-500" },
-                    { icon: Target, title: "Tournaments", value: "5 Games", color: "from-pink-400 to-red-500" }
+                    { icon: Trophy, title: "Prize Pool", value: "₹24,000", color: "from-yellow-400 to-orange-500" },
+                    { icon: Users, title: "Total Players", value: "1400+", color: "from-blue-400 to-purple-500" },
+                    { icon: Calendar, title: "Event Days", value: "2 Days", color: "from-green-400 to-teal-500" },
+                    { icon: Target, title: "Tournaments", value: "2 Games", color: "from-pink-400 to-red-500" }
                   ].map((stat, index) => (
                     <AnimatedElement key={index} id={`stat-${index}`} delay={1200 + index * 100} animation="slideLeft">
                       <div className="flex items-center gap-4 bg-black/20 backdrop-blur-xl rounded-2xl p-6 hover:bg-black/40 transition-all duration-300 hover:scale-105">

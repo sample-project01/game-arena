@@ -6,13 +6,13 @@ const AboutMePage = () => {
 
   // Sample data - replace with your actual information
   const personalInfo = {
-    name: "Alex Gaming",
+    name: "Sarthak Upadhyay",
     title: "Tournament Organizer & Pro Gamer",
-    location: "Bhopal, Madhya Pradesh, India",
-    experience: "5+ Years",
-    profileImage: "/api/placeholder/300/300", // Replace with your actual image path
+    location: "Damoh, Madhya Pradesh, India",
+    experience: "2+ Years",
+    profileImage: "/profile-pic.png", // Replace with your actual image path
     bio: bio,
-    email: "alex@gamingtournaments.com",
+    email: "sarthakupadhyay303@gmail.com",
     discord: "AlexGaming#1234",
     twitch: "@alexgaming_live"
   };
@@ -95,7 +95,7 @@ const AboutMePage = () => {
         <div className='text-center mb-8 sm:mb-12 lg:mb-16'>
           {/* Profile Image */}
           <div className='relative inline-block mb-6'>
-            <div className='w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto rounded-full border-4 border-orange-500 p-1 bg-gradient-to-r from-orange-500 to-red-500'>
+            <div className=' w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto rounded-full border-4 border-orange-500 p-1 bg-gradient-to-r from-orange-500 to-red-500'>
               <div className='w-full h-full rounded-full overflow-hidden bg-gray-700 flex items-center justify-center'>
                 {!imageError ? (
                   <img 
@@ -115,7 +115,7 @@ const AboutMePage = () => {
           </div>
 
           {/* Name and Title */}
-          <h1 className='text-3xl sm:text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent mb-2 lg:mb-4'>
+          <h1 className='text-3xl sm:text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent mb-8 lg:mb-4 pb-4'>
             {personalInfo.name}
           </h1>
           <p className='text-lg sm:text-xl lg:text-2xl text-gray-300 mb-2'>
@@ -131,11 +131,11 @@ const AboutMePage = () => {
 
         {/* Bio Section */}
         <div className='mb-8 sm:mb-12 lg:mb-16'>
-          <div className='bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 sm:p-8 lg:p-10 border border-white/20 text-center'>
+          <div className='bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 sm:p-8 lg:p-10 border border-white/20 text-center '>
             <h2 className='text-2xl sm:text-3xl font-bold text-white mb-4 lg:mb-6'>About Me</h2>
-            <div className='text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-4xl mx-auto mb-6 lg:mb-8 whitespace-pre wrap-break-word'>
+            <pre className='text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-4xl mx-auto mb-6 lg:mb-8 whitespace-pre-wrap'>
               {personalInfo.bio}
-            </div>
+            </pre>
             
             {/* Contact Info */}
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6'>

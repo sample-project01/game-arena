@@ -7,6 +7,9 @@ import Rules from './Componants/pages/Rules/Rules.jsx'
 import Navbar from './Componants/home/Navbar.jsx'
 import JoinBattle from './Componants/pages/JoinBattle/JoinBattlePage.jsx'
 import AboutMePage from './Componants/pages/AboutMe/AboutMePage.jsx'
+import NotFoundPage from './Componants/pages/Not-Found/NotFoundPage.jsx'
+import CreateTokenPage from './Componants/pages/create-token/CreateTokenPage.jsx'
+import RedeemTokenPage from './Componants/pages/redeem-token/RedeemTokenPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -16,6 +19,9 @@ createRoot(document.getElementById('root')).render(
       <Route path='/rules' element={<Rules />}></Route>
       <Route path='/join-battle' element={<JoinBattle />}></Route>
       <Route path='/about-me' element={<AboutMePage />}></Route>
+      <Route path='/create-token' element={<CreateTokenPage />}></Route>
+      <Route path='/redeem-token' element={<RedeemTokenPage />}></Route>
+      <Route path='*' element={<NotFoundPage />}></Route>
     </Routes>
 
 

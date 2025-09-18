@@ -41,18 +41,18 @@ const GameCard = () => {
                 </div>
                 <div className="grid grid-cols-3 gap-6 mb-8">
                   {[
-                    { label: "Prize", value: "₹1,50,000" },
-                    { label: "Teams", value: "120" },
-                    { label: "Matches", value: "15" }
+                    { label: "Prize", value: "₹17,000" },
+                    { label: "Teams", value: "Solo/Duo/Squid" },
+                    { label: "Matches", value: "10" }
                   ].map((item, index) => (
                     <div key={index} className="text-center">
-                      <div className="text-3xl font-black text-cyan-400 group-hover:text-white transition-colors">{item.value}</div>
+                      <div className="text-2xl font-black text-cyan-400 group-hover:text-white transition-colors">{item.value}</div>
                       <div className="text-sm text-gray-400">{item.label}</div>
                     </div>
                   ))}
                 </div>
                 <div className="flex items-center justify-between">
-                  <div className="text-cyan-400 font-bold group-hover:text-white transition-colors" onClick={() => window.location.href = "https://forms.gle/HXDsVh6PM2FP6MQH9"}>Register Now →</div>
+                  <div className="text-cyan-400 font-bold group-hover:text-white transition-colors" onClick={() => window.location.href = "/join-battle"}>Register Now →</div>
                   <div className="px-4 py-2 bg-cyan-500/20 rounded-full text-cyan-400 text-sm font-bold">OPEN</div>
                 </div>
               </GlowingCard>
@@ -75,18 +75,18 @@ const GameCard = () => {
                 </div>
                 <div className="grid grid-cols-3 gap-6 mb-8">
                   {[
-                    { label: "Prize", value: "₹1,00,000" },
-                    { label: "Teams", value: "80" },
-                    { label: "Matches", value: "12" }
+                    { label: "Prize", value: "₹7,000" },
+                    { label: "Teams", value: "Solo/Duo/Squid" },
+                    { label: "Matches", value: "10" }
                   ].map((item, index) => (
                     <div key={index} className="text-center">
-                      <div className="text-3xl font-black text-orange-400 group-hover:text-white transition-colors">{item.value}</div>
+                      <div className="text-2xl font-black text-orange-400 group-hover:text-white transition-colors">{item.value}</div>
                       <div className="text-sm text-gray-400">{item.label}</div>
                     </div>
                   ))}
                 </div>
                 <div className="flex items-center justify-between">
-                  <div className="text-orange-400 font-bold group-hover:text-white transition-colors" onClick={() => window.location.href = "https://forms.gle/HXDsVh6PM2FP6MQH9"}>Register Now →</div>
+                  <div className="text-orange-400 font-bold group-hover:text-white transition-colors" onClick={() => window.location.href = "/join-battle"}>Register Now →</div>
                   <div className="px-4 py-2 bg-orange-500/20 rounded-full text-orange-400 text-sm font-bold">OPEN</div>
                 </div>
               </GlowingCard>

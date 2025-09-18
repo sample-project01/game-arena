@@ -7,16 +7,15 @@ const JoinBattlePage = () => {
   const runningEvents = [
     {
       id: 1,
-      title: "FIFA 24 Championship",
-      game: "FIFA 24",
-      startTime: "2025-09-17T14:00:00",
-      endTime: "2025-09-17T18:00:00",
-      participants: 45,
+      title: "Free Fire Championship ",
+      game: "Free Fire",
+      startTime: "2025-09-28T20:00:00",
+      endTime: "2025-09-28T21:00:00",
       maxParticipants: 64,
       prizePool: "$500",
       status: "Live",
-      difficulty: "Expert",
-      platform: "PlayStation",
+      Type: "Squad",
+      platform: "Mobile",
       thumbnail: "🎮"
     },
     {
@@ -25,11 +24,10 @@ const JoinBattlePage = () => {
       game: "Apex Legends",
       startTime: "2025-09-17T15:30:00",
       endTime: "2025-09-17T19:00:00",
-      participants: 28,
       maxParticipants: 30,
       prizePool: "$300",
       status: "Starting Soon",
-      difficulty: "Intermediate",
+      Type: "Duo",
       platform: "PC",
       thumbnail: "🔫"
     },
@@ -39,11 +37,10 @@ const JoinBattlePage = () => {
       game: "Rocket League",
       startTime: "2025-09-17T16:00:00",
       endTime: "2025-09-17T20:00:00",
-      participants: 12,
       maxParticipants: 16,
       prizePool: "$200",
       status: "Registration Open",
-      difficulty: "Beginner",
+      Type: "Solo",
       platform: "Cross-Platform",
       thumbnail: "🚗"
     }
@@ -60,7 +57,7 @@ const JoinBattlePage = () => {
       maxParticipants: 100,
       prizePool: "$1000",
       status: "Registration Opens Soon",
-      difficulty: "Expert",
+      Type: "Solo",
       platform: "PC",
       thumbnail: "💥"
     },
@@ -74,7 +71,7 @@ const JoinBattlePage = () => {
       maxParticipants: 50,
       prizePool: "$750",
       status: "Early Registration",
-      difficulty: "Expert",
+       Type: "Solo",
       platform: "PC",
       thumbnail: "🎯"
     },
@@ -88,7 +85,7 @@ const JoinBattlePage = () => {
       maxParticipants: 80,
       prizePool: "$400",
       status: "Registration Open",
-      difficulty: "Intermediate",
+      Type: "Solo",
       platform: "Cross-Platform",
       thumbnail: "🏗️"
     }
@@ -123,10 +120,11 @@ const JoinBattlePage = () => {
   };
 
   const getDifficultyColor = (difficulty) => {
+    console.log("dis"+difficulty)
     switch (difficulty) {
-      case 'Beginner': return 'text-green-400';
-      case 'Intermediate': return 'text-yellow-400';
-      case 'Expert': return 'text-red-400';
+      case 'Solo': return 'text-green-400';
+      case 'Duo': return 'text-yellow-400';
+      case 'Squad': return 'text-red-400';
       default: return 'text-gray-400';
     }
   };
@@ -164,8 +162,8 @@ const JoinBattlePage = () => {
             <span className='text-orange-400 font-semibold'>{event.prizePool}</span>
           </div>
           <div className='flex justify-between'>
-            <span className='text-gray-300'>Difficulty:</span>
-            <span className={`font-medium ${getDifficultyColor(event.difficulty)}`}>{event.difficulty}</span>
+            <span className='text-gray-300'>Type:</span>
+            <span className={`font-medium ${getDifficultyColor(event.Type)}`}>{event.Type}</span>
           </div>
         </div>
 
@@ -198,22 +196,22 @@ const JoinBattlePage = () => {
             <p className='text-orange-300'>{formatTime(event.startTime)}</p>
           </div>
           <div className='text-center p-3 bg-black/20 rounded-lg'>
-            <p className='text-gray-400 text-sm mb-1'>Participants</p>
-            <p className='text-white font-semibold text-xl'>{event.participants}/{event.maxParticipants}</p>
-            <div className='w-full bg-gray-700 rounded-full h-2 mt-1'>
+            <p className='text-gray-400 text-sm mb-1'>Participants Total </p>
+            <p className='text-white font-semibold text-xl'>{event.maxParticipants}</p>
+            {/* <div className='w-full bg-gray-700 rounded-full h-2 mt-1'>
               <div 
                 className='bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full' 
                 style={{ width: `${(event.participants / event.maxParticipants) * 100}%` }}
               ></div>
-            </div>
+            </div> */}
           </div>
           <div className='text-center p-3 bg-black/20 rounded-lg'>
             <p className='text-gray-400 text-sm mb-1'>Prize Pool</p>
             <p className='text-orange-400 font-bold text-2xl'>{event.prizePool}</p>
           </div>
           <div className='text-center p-3 bg-black/20 rounded-lg'>
-            <p className='text-gray-400 text-sm mb-1'>Difficulty</p>
-            <p className={`font-bold text-lg ${getDifficultyColor(event.difficulty)}`}>{event.difficulty}</p>
+            <p className='text-gray-400 text-sm mb-1'>Type</p>
+            <p className={`font-bold text-lg ${getDifficultyColor(event.type)}`}>{event.Type}</p>
           </div>
         </div>
 
