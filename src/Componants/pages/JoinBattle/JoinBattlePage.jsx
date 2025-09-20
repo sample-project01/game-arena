@@ -138,7 +138,9 @@ const JoinBattlePage = () => {
           </div>
         </div>
 
-        <button className='cursor-pointer w-full mt-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 text-sm'>
+        <button className='cursor-pointer w-full mt-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 text-sm'
+           onClick={()=> window.location.href="https://forms.gle/i3QAmT8UXQV55cmv9"
+        }>
           {isUpcoming ? 'Register Now' : 'Join Battle'}
         </button>
       </div>
