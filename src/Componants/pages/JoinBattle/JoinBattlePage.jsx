@@ -7,88 +7,59 @@ const JoinBattlePage = () => {
   const runningEvents = [
     {
       id: 1,
-      title: "Free Fire Championship ",
+      title: "Free Fire Championship(Per Kill Rewards) ",
       game: "Free Fire",
-      startTime: "2025-09-28T20:00:00",
-      endTime: "2025-09-28T21:00:00",
-      maxParticipants: 64,
-      prizePool: "$500",
+      startTime: "2025-09-21T20:00:00",
+      endTime: "2025-09-21T21:00:00",
+      maxParticipants: 50,
+      prizePool: "₹400",
       status: "Live",
-      Type: "Squad",
-      platform: "Mobile",
+      Type: "Solo",
+      platform: "Mobile Only",
       thumbnail: "🎮"
     },
     {
       id: 2,
-      title: "Apex Legends Squad Battle",
-      game: "Apex Legends",
-      startTime: "2025-09-17T15:30:00",
-      endTime: "2025-09-17T19:00:00",
-      maxParticipants: 30,
-      prizePool: "$300",
-      status: "Starting Soon",
-      Type: "Duo",
-      platform: "PC",
-      thumbnail: "🔫"
-    },
-    {
-      id: 3,
-      title: "Rocket League 2v2",
-      game: "Rocket League",
-      startTime: "2025-09-17T16:00:00",
-      endTime: "2025-09-17T20:00:00",
-      maxParticipants: 16,
-      prizePool: "$200",
-      status: "Registration Open",
+      title: "Free Fire Championship(Winner Takes all) ",
+      game: "Free Fire",
+      startTime: "2025-09-21T21:00:00",
+      endTime: "2025-09-21T22:00:00",
+      maxParticipants: 50,
+      prizePool: "₹500",
+      status: "Live",
       Type: "Solo",
-      platform: "Cross-Platform",
-      thumbnail: "🚗"
-    }
+      platform: "Mobile Only",
+      thumbnail: "🎮"
+    },
   ];
 
   const upcomingEvents = [
     {
-      id: 4,
-      title: "Call of Duty Warzone",
-      game: "COD Warzone",
-      startTime: "2025-09-18T19:00:00",
-      endTime: "2025-09-18T23:00:00",
-      participants: 0,
-      maxParticipants: 100,
-      prizePool: "$1000",
-      status: "Registration Opens Soon",
-      Type: "Solo",
-      platform: "PC",
-      thumbnail: "💥"
-    },
-    {
-      id: 5,
-      title: "Valorant Champions",
-      game: "Valorant",
-      startTime: "2025-09-19T17:00:00",
-      endTime: "2025-09-19T22:00:00",
-      participants: 8,
+      id: 1,
+      title: "Free Fire Championship(Per Kill Rewards) ",
+      game: "Free Fire",
+      startTime: "2025-09-22T20:00:00",
+      endTime: "2025-09-22T21:00:00",
       maxParticipants: 50,
-      prizePool: "$750",
-      status: "Early Registration",
-       Type: "Solo",
-      platform: "PC",
-      thumbnail: "🎯"
+      prizePool: "₹400",
+      status: "Live",
+      Type: "Solo",
+      platform: "Mobile Only",
+      thumbnail: "🎮"
     },
     {
-      id: 6,
-      title: "Fortnite Solo Showdown",
-      game: "Fortnite",
-      startTime: "2025-09-20T14:00:00",
-      endTime: "2025-09-20T18:00:00",
-      participants: 23,
-      maxParticipants: 80,
-      prizePool: "$400",
-      status: "Registration Open",
+      id: 2,
+      title: "Free Fire Championship(Winner Takes all) ",
+      game: "Free Fire",
+      startTime: "2025-09-22T21:00:00",
+      endTime: "2025-09-22T22:00:00",
+      maxParticipants: 50,
+      prizePool: "₹500",
+      status: "Live",
       Type: "Solo",
-      platform: "Cross-Platform",
-      thumbnail: "🏗️"
-    }
+      platform: "Mobile Only",
+      thumbnail: "🎮"
+    },
   ];
 
   const formatTime = (dateString) => {
@@ -167,7 +138,7 @@ const JoinBattlePage = () => {
           </div>
         </div>
 
-        <button className='w-full mt-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 text-sm'>
+        <button className='cursor-pointer w-full mt-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 text-sm'>
           {isUpcoming ? 'Register Now' : 'Join Battle'}
         </button>
       </div>
@@ -198,12 +169,7 @@ const JoinBattlePage = () => {
           <div className='text-center p-3 bg-black/20 rounded-lg'>
             <p className='text-gray-400 text-sm mb-1'>Participants Total </p>
             <p className='text-white font-semibold text-xl'>{event.maxParticipants}</p>
-            {/* <div className='w-full bg-gray-700 rounded-full h-2 mt-1'>
-              <div 
-                className='bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full' 
-                style={{ width: `${(event.participants / event.maxParticipants) * 100}%` }}
-              ></div>
-            </div> */}
+           
           </div>
           <div className='text-center p-3 bg-black/20 rounded-lg'>
             <p className='text-gray-400 text-sm mb-1'>Prize Pool</p>
@@ -215,7 +181,9 @@ const JoinBattlePage = () => {
           </div>
         </div>
 
-        <button className='w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-orange-600 hover:to-red-600 hover:scale-[1.02] transition-all duration-200'>
+        <button className='cursor-pointer w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-orange-600 hover:to-red-600 hover:scale-[1.02] transition-all duration-200'
+        onClick={()=> window.location.href="https://forms.gle/i3QAmT8UXQV55cmv9"
+        }>
           {isUpcoming ? 'Register Now' : 'Join Battle'} 🎮
         </button>
       </div>
@@ -300,7 +268,8 @@ const JoinBattlePage = () => {
             <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
               Create custom tournaments, set prize pools, and manage your own gaming community with our tournament hosting tools.
             </p>
-            <button className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-8 rounded-xl hover:from-purple-600 hover:to-pink-600 hover:scale-[1.02] transition-all duration-200'>
+            <button className='cursor-pointer bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-8 rounded-xl hover:from-purple-600 hover:to-pink-600 hover:scale-[1.02] transition-all duration-200'
+            onClick={()=>window.location.href="/not-found"}>
               Host Tournament 🎯
             </button>
           </div>

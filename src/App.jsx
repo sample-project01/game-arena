@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import  { useState, useEffect,  } from 'react';
 ;
 
 import Footer from './Componants/home/Footer';
 import GameCard from "./Componants/home/GameCard"
 import Hero from "./Componants/home/Hero"
 import Navbar from './Componants/home/Navbar';
+// import JoinSection from './Componants/home/JoinSection';
 const GamingEventLanding = () => {
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -76,6 +77,7 @@ const GamingEventLanding = () => {
 
       {/* Hero Section */}
       <Hero/>
+      {/* <JoinSection/> */}
 
 
       {/* Game Cards Section */}
